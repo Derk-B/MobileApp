@@ -40,7 +40,7 @@ class _LandingPageTutorialCarouselState
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: 180.0,
+            height: 240,
             enableInfiniteScroll: false,
             onPageChanged: (index, _) => setState(() => _current = index),
           ),
@@ -61,6 +61,7 @@ class _LandingPageTutorialCarouselState
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
                         child: Text(
                           widget.title,
+                          textAlign: TextAlign.center,
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),

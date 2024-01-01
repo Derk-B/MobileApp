@@ -9,6 +9,9 @@ class LandingPageDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      surfaceTintColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.zero)),
       width: MediaQuery.of(context).size.width,
       child: ListView(
         padding: EdgeInsets.zero,

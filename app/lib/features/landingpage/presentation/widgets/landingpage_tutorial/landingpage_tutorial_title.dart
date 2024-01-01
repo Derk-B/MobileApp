@@ -17,6 +17,7 @@ class LandingPageTutorialTitle extends StatelessWidget {
               ),
               Text(
                 "Makkelijker kan haast niet.",
+                textAlign: TextAlign.center,
                 style: Theme.of(context)
                     .textTheme
                     .headlineLarge

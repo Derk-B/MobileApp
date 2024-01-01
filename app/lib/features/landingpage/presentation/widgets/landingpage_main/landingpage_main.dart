@@ -1,6 +1,6 @@
-import 'package:app/features/landingpage/presentation/widgets/main/landingpage_main_banner.dart';
-import 'package:app/features/landingpage/presentation/widgets/main/landingpage_main_search.dart';
-import 'package:app/features/landingpage/presentation/widgets/main/landingpage_main_title.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_main/landingpage_main_banner.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_main/landingpage_main_search.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_main/landingpage_main_title.dart';
 import 'package:flutter/material.dart';
 
 /// Contains the page title, searchbar and banner

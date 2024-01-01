@@ -15,25 +15,27 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
   Widget build(BuildContext context) {
     return Column(children: [
       const SizedBox(height: 10),
-      Form(
-        child: SizedBox(
-          height: 56,
-          child: Stack(children: [
-            TextField(
-              controller: _controller,
-              onChanged: (value) =>
-                  setState(() => _showClearIcon = value.isNotEmpty),
-              decoration: InputDecoration(
-                hintText: "Adres, b.v. Amstelplein 10",
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(50.0),
-                    borderSide: const BorderSide(color: Colors.black)),
+      Container(
+        padding: const EdgeInsets.all(4.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50.0),
+          border: Border.all(color: Colors.black, width: 0.5),
+        ),
+        child: Form(
+          child: Stack(
+            children: [
+              TextField(
+                controller: _controller,
+                onChanged: (value) =>
+                    setState(() => _showClearIcon = value.isNotEmpty),
+                decoration: const InputDecoration(
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
+                  hintText: "Adres, b.v. Amstelplein 10",
+                  border: OutlineInputBorder(borderSide: BorderSide.none),
+                ),
               ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height,
-              padding: const EdgeInsets.all(4.0),
-              child: Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   _showClearIcon
@@ -51,7 +53,6 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                     child: Text(
                       "    Zoek    ",
                       style: TextStyle(
-                        height: 2.4,
                         fontSize: 20,
                         color: Theme.of(context).colorScheme.onPrimary,
                       ),
@@ -60,8 +61,8 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                   ),
                 ],
               ),
-            ),
-          ]),
+            ],
+          ),
         ),
       ),
     ]);

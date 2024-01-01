@@ -1,5 +1,5 @@
-import 'package:app/features/landingpage/presentation/widgets/tutorial/landingpage_tutorial_carousel.dart';
-import 'package:app/features/landingpage/presentation/widgets/tutorial/landingpage_tutorial_title.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_tutorial/landingpage_tutorial_carousel.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_tutorial/landingpage_tutorial_title.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageTutorial extends StatelessWidget {
