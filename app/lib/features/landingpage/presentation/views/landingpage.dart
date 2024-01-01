@@ -1,8 +1,8 @@
 import 'package:app/features/landingpage/presentation/widgets/landingpage_appbar.dart';
 import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer.dart';
 import 'package:app/features/landingpage/presentation/widgets/landingpage_footer/landingpage_footer.dart';
-import 'package:app/features/landingpage/presentation/widgets/main/landingpage_main.dart';
-import 'package:app/features/landingpage/presentation/widgets/tutorial/landingpage_tutorial.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_main/landingpage_main.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_tutorial/landingpage_tutorial.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
