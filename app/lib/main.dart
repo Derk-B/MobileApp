@@ -15,16 +15,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'NietThuisbezorgd',
       theme: ThemeData(
           useMaterial3: true,
           // Colors
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.orange,
+            primary: Colors.orange,
             onPrimary: Colors.white,
+            secondary: const Color.fromARGB(155, 191, 191, 191),
           ),
           primaryColor: primaryColor,
-
           // Buttons
           textButtonTheme: TextButtonThemeData(
             style: ButtonStyle(
