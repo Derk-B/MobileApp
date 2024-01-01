@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
             primary: Colors.orange,
             onPrimary: Colors.white,
             secondary: const Color.fromARGB(155, 191, 191, 191),
+            onSecondary: Colors.black,
           ),
           primaryColor: primaryColor,
           // Buttons

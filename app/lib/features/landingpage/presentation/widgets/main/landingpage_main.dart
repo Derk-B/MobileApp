@@ -9,20 +9,20 @@ class LandingPageMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const LandingPageMainTitle(),
+              LandingPageMainTitle(),
               LandingPageMainSearch(),
             ],
           ),
         ),
-        const LandingPageMainBanner()
+        LandingPageMainBanner()
       ],
     );
   }
