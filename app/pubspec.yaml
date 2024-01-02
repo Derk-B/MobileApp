@@ -39,6 +39,9 @@ dependencies:
   bloc: ^8.1.2
   carousel_slider: ^4.2.1
   url_launcher: ^6.2.2
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  firebase_ui_auth: ^1.10.0
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,5 @@
+import 'package:app/features/authentication/presentation/views/login_page.dart';
+import 'package:app/features/authentication/presentation/views/register_page.dart';
 import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_iconbutton.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +34,10 @@ class LandingPageDrawerHeader extends StatelessWidget {
               children: [
                 Expanded(
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
+                      },
                       style: TextButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 12.0),
                         backgroundColor:
@@ -49,7 +54,10 @@ class LandingPageDrawerHeader extends StatelessWidget {
                 const SizedBox(width: 16.0),
                 Expanded(
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const RegisterPage()));
+                      },
                       style: TextButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 12.0),
                         backgroundColor: Theme.of(context).colorScheme.primary,

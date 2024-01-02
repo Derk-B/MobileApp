@@ -1,2 +1,8 @@
 app/.firebaserc
 app/.firebase/hosting.YnVpbGQvd2Vi.cache
+app/android/app/google-services.json
+app/ios/firebase_app_id_file.json
+app/ios/Runner/GoogleService-Info.plist
+app/lib/firebase_options.dart
+app/macos/Runner/GoogleService-Info.plist
+app/macos/firebase_app_id_file.json

@@ -1,7 +1,15 @@
 import 'package:app/features/landingpage/presentation/views/landingpage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -28,11 +36,12 @@ class MyApp extends StatelessWidget {
             onSecondary: Colors.black,
           ),
           primaryColor: primaryColor,
+
           // Buttons
           textButtonTheme: TextButtonThemeData(
             style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(primaryColor),
-            ),
+                backgroundColor: MaterialStatePropertyAll(primaryColor),
+                foregroundColor: const MaterialStatePropertyAll(Colors.white)),
           ),
 
           // Text
@@ -57,6 +66,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const LandingPage();
+    return StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        return const LandingPage();
+      },
+    );
   }
 }
