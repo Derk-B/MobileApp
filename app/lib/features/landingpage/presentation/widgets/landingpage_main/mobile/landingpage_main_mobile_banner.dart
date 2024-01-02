@@ -36,8 +36,8 @@ class TriangleShape extends CustomPainter {
   }
 }
 
-class LandingPageMainBanner extends StatelessWidget {
-  const LandingPageMainBanner({super.key});
+class LandingPageMainMobileBanner extends StatelessWidget {
+  const LandingPageMainMobileBanner({super.key});
 
   @override
   Widget build(BuildContext context) {

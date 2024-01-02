@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           // Colors
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.orange,
-            primary: Colors.orange,
+            primary: primaryColor,
             onPrimary: Colors.white,
             secondary: const Color.fromARGB(155, 191, 191, 191),
             onSecondary: Colors.black,

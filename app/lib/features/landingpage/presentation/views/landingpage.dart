@@ -10,10 +10,10 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const LandingPageAppBar().build(context),
-      endDrawer: const LandingPageDrawer(),
-      body: const SingleChildScrollView(
+    return const Scaffold(
+      appBar: LandingPageAppBar(),
+      endDrawer: LandingPageDrawer(),
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             LandingPageMain(),

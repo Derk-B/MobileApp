@@ -1,3 +1,6 @@
+import 'package:app/features/landingpage/presentation/widgets/landingpage_tutorial/desktop/landingpage_tutorial_title_desktop.dart';
+import 'package:app/features/landingpage/presentation/widgets/landingpage_tutorial/mobile/landingpage_tutorial_title_mobile.dart';
+import 'package:app/shared/constants/contants.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageTutorialTitle extends StatelessWidget {
@@ -5,29 +8,12 @@ class LandingPageTutorialTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32.0),
-          child: Column(
-            children: [
-              Text(
-                "Zo werkt het",
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              Text(
-                "Makkelijker kan haast niet.",
-                textAlign: TextAlign.center,
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineLarge
-                    ?.copyWith(color: Theme.of(context).primaryColor),
-              ),
-              const SizedBox(height: 32.0),
-            ],
-          ),
-        ),
-      ],
-    );
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth < LARGE_SCREEN_SIZE) {
+        return const LandingPageTutorialTitleMobile();
+      } else {
+        return const LandingPageTutorialTitleDesktop();
+      }
+    });
   }
 }
