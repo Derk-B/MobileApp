@@ -10,8 +10,8 @@ class TutorialWidget {
 
 const List<TutorialWidget> tutorialWidgetsList = [
   TutorialWidget(
-      "Vertel ons waar je je bevindt",
-      "Wij laten je zien bij welke winkels en restaurants in de buurt je kan bestellen",
+      "Geef je huidige locatie",
+      "Wij zoeken de dichtsbijzijnde restaurants en winkels voor je op",
       Icons.location_on),
   TutorialWidget("Vind wat je zoekt",
       "Zoek naar producten of gerechten, bedrijven of keukens", Icons.fastfood),

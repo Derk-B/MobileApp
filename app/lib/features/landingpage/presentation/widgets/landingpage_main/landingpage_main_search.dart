@@ -37,7 +37,7 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                       decoration: const InputDecoration(
                         contentPadding: EdgeInsets.symmetric(
                             vertical: 12.0, horizontal: 8.0),
-                        hintText: "Adres, b.v. Amstelplein 10",
+                        hintText: "Adres, b.v. Jan Steenlaan 15",
                         border: OutlineInputBorder(borderSide: BorderSide.none),
                       ),
                     ),

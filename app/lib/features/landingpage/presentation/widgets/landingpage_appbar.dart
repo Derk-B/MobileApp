@@ -23,7 +23,7 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
     return LayoutBuilder(
       builder: (context, constraint) => AppBar(
         title: Text(
-          "NietThuisbezorgd.nl",
+          "FoodDeliveryApp.nl",
           style: TextStyle(color: Theme.of(context).primaryColor),
         ),
         shadowColor: Colors.black,

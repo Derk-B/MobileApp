@@ -13,7 +13,7 @@ class LandingPageDrawerFeatures extends StatelessWidget {
         children: [
           LandingPageDrawerIconButton(
             icon: Icon(Icons.redeem_outlined),
-            label: "Punten",
+            label: "Cadeaukaarten",
           ),
           LandingPageDrawerIconButton(
             icon: Icon(Icons.help_outline),

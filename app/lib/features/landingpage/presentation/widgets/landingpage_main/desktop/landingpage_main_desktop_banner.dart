@@ -61,10 +61,16 @@ class LandingPageMainDesktopBanner extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(vertical: 20.0),
             alignment: Alignment.center,
+            width: MediaQuery.of(context).size.width * 0.4,
             color: Theme.of(context).primaryColor,
-            child: SizedBox(
-              child: Image.network(
-                  "https://www.thuisbezorgd.nl/consumer-web/images/falafel_salad_home_dss_desktop_nl.1a0c2a35.png"),
+            child: Container(
+              alignment: Alignment.center,
+              width: 800,
+              constraints: BoxConstraints(
+                  maxWidth: MediaQuery.of(context).size.width * 0.35),
+              child: Image.asset(
+                "lib/assets/images/banner.png",
+              ),
             ),
           ),
         ],

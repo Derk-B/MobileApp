@@ -19,7 +19,7 @@ class LandingPageTutorialTitleDesktop extends StatelessWidget {
                     ?.copyWith(fontSize: 30),
               ),
               Text(
-                "Makkelijker kan haast niet.",
+                "Nergens zo makkelijk",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       color: Theme.of(context).primaryColor,

@@ -9,19 +9,19 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // Color values
-  final primaryColor = const Color(0xFFFF8C00);
+  final primaryColor = const Color.fromARGB(255, 16, 167, 16);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'NietThuisbezorgd',
+      title: 'FoodDeliveryApp',
       theme: ThemeData(
           useMaterial3: true,
           // Colors
           colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.orange,
+            seedColor: Colors.green,
             primary: primaryColor,
             onPrimary: Colors.white,
             secondary: const Color.fromARGB(155, 191, 191, 191),

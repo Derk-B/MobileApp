@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class TriangleShape extends CustomPainter {
@@ -56,8 +58,7 @@ class LandingPageMainMobileBanner extends StatelessWidget {
           color: Theme.of(context).primaryColor,
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.7,
-            child: Image.network(
-                "https://www.thuisbezorgd.nl/consumer-web/images/falafel_salad_home_dss_desktop_nl.1a0c2a35.png"),
+            child: Image.asset("lib/assets/images/banner.png"),
           ),
         ),
       ],

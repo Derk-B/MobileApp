@@ -10,11 +10,11 @@ class LandingPageMainTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Bestel eten en meer",
+          Text("Bestel eten en drinken",
               style: Theme.of(context).textTheme.headlineLarge),
           const SizedBox(height: 10),
           Text(
-            "Restaurants en boodschappen in de buurt",
+            "Restaurants en winkels in de buurt",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ],
