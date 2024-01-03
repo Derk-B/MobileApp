@@ -1,5 +1,7 @@
 import 'package:app/features/landingpage/presentation/views/landingpage.dart';
+import 'package:app/l10n/firebase_ui_labels_localized.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_ui_localizations/firebase_ui_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -49,6 +51,10 @@ class MyApp extends StatelessWidget {
             headlineMedium: TextStyle(fontWeight: FontWeight.bold),
             headlineLarge: TextStyle(fontWeight: FontWeight.bold),
           )),
+      localizationsDelegates: [
+        FirebaseUILocalizations.withDefaultOverrides(
+            const FirebaseUILabelsLocalized())
+      ],
       home: const MyHomePage(title: 'NietThuisbezorgd.nl'),
     );
   }

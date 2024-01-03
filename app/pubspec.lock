@@ -186,7 +186,7 @@ packages:
     source: hosted
     version: "1.10.0"
   firebase_ui_localizations:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: firebase_ui_localizations
       sha256: "3224f45191614bb67d95801689b31a3bb07d5581dfad20c815bf8317b088f003"
@@ -262,7 +262,7 @@ packages:
     source: hosted
     version: "4.0.2"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
