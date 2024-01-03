@@ -19,6 +19,16 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   final Size preferredSize;
 
+  changeLocale(BuildContext context) {
+    final app = App.of(context);
+
+    if (app.locale == const Locale("en")) {
+      app.setLocale(const Locale("nl"));
+    } else {
+      app.setLocale(const Locale("en"));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -32,9 +42,7 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
         elevation: 10,
         actions: [
           IconButton(
-              onPressed: () {
-                App.of(context).setLocale(const Locale("en"));
-              },
+              onPressed: () => changeLocale(context),
               icon: const Icon(Icons.flag)),
           IconButton(
             icon: const Icon(Icons.menu),

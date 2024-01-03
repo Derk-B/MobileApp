@@ -1,3 +1,4 @@
+import 'package:app/shared/localizations_ext.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageTutorialTitleDesktop extends StatelessWidget {
@@ -12,14 +13,15 @@ class LandingPageTutorialTitleDesktop extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Zo werkt het",
+                AppLocalizations.of(context)!.landingpage_tutorial_title_intro,
                 style: Theme.of(context)
                     .textTheme
                     .titleLarge
                     ?.copyWith(fontSize: 30),
               ),
               Text(
-                "Nergens zo makkelijk",
+                AppLocalizations.of(context)!
+                    .landingpage_tutorial_title_eyecatcher,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       color: Theme.of(context).primaryColor,

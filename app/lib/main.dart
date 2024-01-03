@@ -33,6 +33,8 @@ class _AppState extends State<App> {
 
   Locale _locale = const Locale("nl");
 
+  Locale get locale => _locale;
+
   void setLocale(Locale locale) {
     setState(() {
       _locale = locale;
@@ -71,7 +73,7 @@ class _AppState extends State<App> {
           )),
       localizationsDelegates: [
         FirebaseUILocalizations.withDefaultOverrides(
-            const FirebaseUILabelsLocalized()),
+            FirebaseUILabelsLocalized(_locale)),
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

@@ -1,115 +1,112 @@
+import 'package:app/shared/localizations_ext.dart';
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart';
+import 'package:flutter/material.dart';
 
 class FirebaseUILabelsLocalized extends DefaultLocalizations {
-  const FirebaseUILabelsLocalized();
+  final Locale locale;
+  const FirebaseUILabelsLocalized(this.locale);
+
+  AppLocalizations? get _appLocalizations {
+    if (locale == const Locale("en")) {
+      return AppLocalizationsEn();
+    } else {
+      return AppLocalizationsNl();
+    }
+  }
 
   @override
-  String get emailInputLabel => "E-mailadres";
+  String get emailInputLabel =>
+      _appLocalizations!.firebase_ui_email_input_label;
 
   @override
-  String get passwordInputLabel => "Wachtwoord";
+  String get passwordInputLabel =>
+      _appLocalizations!.firebase_ui_password_input_label;
 
   @override
-  String get confirmPasswordInputLabel => "Wachtwoord herhalen";
+  String get confirmPasswordInputLabel =>
+      _appLocalizations!.firebase_ui_confirm_password_input_label;
 
-  /// Used as a label of the EmailForm submit button when the AuthAction is
-  /// AuthAction.signUp.
   @override
-  String get registerActionText => "Registreer";
+  String get registerActionText =>
+      _appLocalizations!.firebase_ui_register_action_text;
 
-  /// Used as a hint text of the LoginView suggesting to create a new account.
   @override
-  String get registerHintText => "Heeft u nog geen account?";
+  String get registerHintText =>
+      _appLocalizations!.firebase_ui_register_hint_text;
 
-  /// Used as a title of the LoginView when AuthAction is AuthAction.signUp.
   @override
-  String get registerText => "Registreer";
+  String get registerText => _appLocalizations!.firebase_ui_register_text;
 
-  /// Used as a label of the EmailForm submit button when the AuthAction is
-  /// AuthAction.signIn.
   @override
-  String get signInActionText => "Login";
+  String get signInActionText =>
+      _appLocalizations!.firebase_ui_sign_in_action_text;
 
-  /// Used as a hint text of the LoginView suggesting to sign in instead of
-  /// registering a new account.
   @override
-  String get signInHintText => "Heeft u al een account?";
+  String get signInHintText => _appLocalizations!.firebase_ui_sign_in_hint_text;
 
-  /// Used as a title of the LoginView when AuthAction is AuthAction.signIn.
   @override
-  String get signInText => "Login";
+  String get signInText => _appLocalizations!.firebase_ui_sign_in_text;
 
-  /// Used as a label of the ForgotPasswordButton.
   @override
-  String get forgotPasswordButtonLabel => "Wachtwoord vergeten?";
+  String get forgotPasswordButtonLabel =>
+      _appLocalizations!.firebase_ui_forgot_password_button_label;
 
-  /// Used as a hint on a ForgotPasswordView.
   @override
   String get forgotPasswordHintText =>
-      "Geef uw e-mailadres en wij sturen een mail waar u een nieuw wachtwoord kan maken.";
+      _appLocalizations!.firebase_ui_password_hint_text;
 
-  /// Used as a title of the ForgotPasswordView.
   @override
-  String get forgotPasswordViewTitle => "Wachtwoord vergeten";
+  String get forgotPasswordViewTitle =>
+      _appLocalizations!.firebase_ui_forgot_password_view_title;
 
-  /// Used as a label of submit button of the ForgotPasswordView.
   @override
-  String get resetPasswordButtonLabel => "Stuur mij een mail";
+  String get resetPasswordButtonLabel =>
+      _appLocalizations!.firebase_ui_reset_password_button_label;
 
-  /// Used as a label of the back button.
   @override
-  String get goBackButtonLabel => "Ga terug";
+  String get goBackButtonLabel =>
+      _appLocalizations!.firebase_ui_go_back_button_label;
 
-  /// Used as an error text when PasswordInput is empty.
   @override
-  String get passwordIsRequiredErrorText => "Wachtwoord mag niet leeg zijn";
+  String get passwordIsRequiredErrorText =>
+      _appLocalizations!.firebase_ui_password_is_required_error_text;
 
-  /// Used as an error text of the EmailInput when the email is empty.
   @override
-  String get emailIsRequiredErrorText => "E-mail mag niet leeg zijn";
+  String get emailIsRequiredErrorText =>
+      _appLocalizations!.firebase_ui_email_is_required_error_text;
 
-  /// Used as an error text when PasswordInput used to confirm the password is
-  /// empty.
   @override
   String get confirmPasswordIsRequiredErrorText =>
-      "Wachtwoord mag niet leeg zijn";
+      _appLocalizations!.firebase_ui_confirm_password_is_required_error_text;
 
-  /// Used as an error text when provided passwords do not match.
   @override
   String get confirmPasswordDoesNotMatchErrorText =>
-      "Wachtwoorden komen niet overeen";
+      _appLocalizations!.firebase_ui_confirm_password_does_not_match_error_text;
 
-  /// Indicates that the password reset email was sent.
   @override
-  String get passwordResetEmailSentText => "Mail is verzonden, check uw inbox";
+  String get passwordResetEmailSentText =>
+      _appLocalizations!.firebase_ui_password_reset_email_sent_text;
 
-  /// Message indicating that something went wrong during email verification
   @override
   String get verificationFailedText =>
-      "Inloggen is mislukt, controleer uw e-mail en wachtwoord";
+      _appLocalizations!.firebase_ui_verification_failed_text;
 
-  /// Used as an error message when the account for provided email was not
-  /// found.
   @override
-  String get userNotFoundErrorText => "E-mailadres is niet bij ons bekend";
+  String get userNotFoundErrorText =>
+      _appLocalizations!.firebase_ui_user_not_found_error_text;
 
-  /// Used as a generic error message when unable to resolve error details from
-  /// Exception or FirebaseAuthException.
   @override
-  String get unknownError =>
-      "Onbekende fout, probeer later nog eens of neem contact op";
+  String get unknownError => _appLocalizations!.firebase_ui_unknown_error;
 
-  /// Used as an error text of the EmailInput if the provided email is not
-  /// valid.
   @override
-  String get isNotAValidEmailErrorText => "Geef een geldig e-mailadres";
+  String get isNotAValidEmailErrorText =>
+      _appLocalizations!.firebase_ui_is_not_a_valid_email_error_text;
 
-  /// Used as an error text of the PasswordInput when provided password is empty
-  /// or is not correct.
   @override
-  String get wrongOrNoPasswordErrorText => "Verkeerd wachtwoord";
+  String get wrongOrNoPasswordErrorText =>
+      _appLocalizations!.firebase_ui_wrong_or_no_password_error_text;
 
-  /// Error text suggesting that used password is too weak
   @override
-  String get weakPasswordErrorText => "Te zwak wachtwoord";
+  String get weakPasswordErrorText =>
+      _appLocalizations!.firebase_ui_weak_password_error_text;
 }
