@@ -1,0 +1,15 @@
+{
+  "landingpage_title": "Bestel eten en drinken",
+  "landingpage_subtitle": "Restaurants en winkels in de buurt",
+  "landingpage_search_hint" : "Adres, b.v. Jan Steenlaan 15",
+  "landingpage_search_button": "Zoek",
+  "landingpage_tutorial_title_intro": "Zo werkt het",
+  "landingpage_tutorial_title_eyecatcher": "Makkelijker kan haast niet",
+  "landingpage_tutorial_widget_title_0": "Geef je huidige locatie",
+  "landingpage_tutorial_widget_description_0":  "Wij zoeken de dichtsbijzijnde restaurants en winkels voor je op",
+  "landingpage_tutorial_widget_title_1": "Geef je huidige locatie",
+  "landingpage_tutorial_widget_description_1":  "Wij zoeken de dichtsbijzijnde restaurants en winkels voor je op",
+  "landingpage_tutorial_widget_title_2": "Geef je huidige locatie",
+  "landingpage_tutorial_widget_description_2":  "Wij zoeken de dichtsbijzijnde restaurants en winkels voor je op",
+  "landingpage_footer_made_by": "Gemaakt door:"
+}

@@ -1,3 +1,4 @@
+import 'package:app/shared/localizations_ext.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageMainSearch extends StatefulWidget {
@@ -34,11 +35,13 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                       controller: _controller,
                       onChanged: (value) =>
                           setState(() => _showClearIcon = value.isNotEmpty),
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(
+                      decoration: InputDecoration(
+                        contentPadding: const EdgeInsets.symmetric(
                             vertical: 12.0, horizontal: 8.0),
-                        hintText: "Adres, b.v. Jan Steenlaan 15",
-                        border: OutlineInputBorder(borderSide: BorderSide.none),
+                        hintText: AppLocalizations.of(context)!
+                            .landingpage_search_hint,
+                        border: const OutlineInputBorder(
+                            borderSide: BorderSide.none),
                       ),
                     ),
                   ),
@@ -55,8 +58,11 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                       icon: const Icon(Icons.clear),
                     )),
                 TextButton(
+                  style: const ButtonStyle().copyWith(
+                      minimumSize:
+                          const MaterialStatePropertyAll(Size(100, 0))),
                   child: Text(
-                    "    Zoek    ",
+                    AppLocalizations.of(context)!.landingpage_search_button,
                     style: TextStyle(
                       fontSize: 20,
                       color: Theme.of(context).colorScheme.onPrimary,

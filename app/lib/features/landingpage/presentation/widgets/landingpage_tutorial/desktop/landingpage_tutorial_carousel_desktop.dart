@@ -15,7 +15,7 @@ class LandingPageTutorialCarouselDesktop extends StatelessWidget {
             BoxConstraints(maxWidth: MediaQuery.of(context).size.width),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: tutorialWidgetsList
+          children: tutorialWidgetsList(context)
               .map((widget) => Column(
                     children: [
                       Icon(

@@ -25,7 +25,7 @@ class _LandingPageTutorialCarouselState
             enableInfiniteScroll: false,
             onPageChanged: (index, _) => setState(() => _current = index),
           ),
-          items: tutorialWidgetsList.map((widget) {
+          items: tutorialWidgetsList(context).map((widget) {
             return Builder(
               builder: (BuildContext context) {
                 return Container(
@@ -59,7 +59,7 @@ class _LandingPageTutorialCarouselState
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: tutorialWidgetsList.asMap().entries.map((entry) {
+          children: tutorialWidgetsList(context).asMap().entries.map((entry) {
             return Container(
               width: 12.0,
               height: 12.0,

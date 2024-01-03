@@ -1,3 +1,4 @@
+import 'package:app/shared/localizations_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -13,7 +14,9 @@ class LandingPageFooter extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text("Made by: Derk Blom"),
+          Text(
+            "${AppLocalizations.of(context)!.landingpage_footer_made_by} Derk Blom",
+          ),
           const SizedBox(height: 8.0),
           InkWell(
             child: Container(

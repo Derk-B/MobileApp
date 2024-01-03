@@ -6,3 +6,5 @@ app/ios/Runner/GoogleService-Info.plist
 app/lib/firebase_options.dart
 app/macos/Runner/GoogleService-Info.plist
 app/macos/firebase_app_id_file.json
+
+**/**.vscode/

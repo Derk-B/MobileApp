@@ -1,4 +1,5 @@
 import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer.dart';
+import 'package:app/main.dart';
 import 'package:app/shared/constants/contants.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,11 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
         surfaceTintColor: Colors.white,
         elevation: 10,
         actions: [
+          IconButton(
+              onPressed: () {
+                App.of(context).setLocale(const Locale("en"));
+              },
+              icon: const Icon(Icons.flag)),
           IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {

@@ -1,3 +1,4 @@
+import 'package:app/shared/localizations_ext.dart';
 import 'package:flutter/material.dart';
 
 class TutorialWidget {
@@ -8,15 +9,20 @@ class TutorialWidget {
   const TutorialWidget(this.title, this.description, this.iconData);
 }
 
-const List<TutorialWidget> tutorialWidgetsList = [
-  TutorialWidget(
-      "Geef je huidige locatie",
-      "Wij zoeken de dichtsbijzijnde restaurants en winkels voor je op",
-      Icons.location_on),
-  TutorialWidget("Vind wat je zoekt",
-      "Zoek naar producten of gerechten, bedrijven of keukens", Icons.fastfood),
-  TutorialWidget(
-      "Bestelling voor bezorging of afhalen",
-      "We houden je op de hoogte van de voortgang van je bestelling",
-      Icons.notifications_active),
-];
+List<TutorialWidget> tutorialWidgetsList(context) => [
+      TutorialWidget(
+          AppLocalizations.of(context)!.landingpage_tutorial_widget_title_0,
+          AppLocalizations.of(context)!
+              .landingpage_tutorial_widget_description_0,
+          Icons.location_on),
+      TutorialWidget(
+          AppLocalizations.of(context)!.landingpage_tutorial_widget_title_1,
+          AppLocalizations.of(context)!
+              .landingpage_tutorial_widget_description_1,
+          Icons.fastfood),
+      TutorialWidget(
+          AppLocalizations.of(context)!.landingpage_tutorial_widget_title_2,
+          AppLocalizations.of(context)!
+              .landingpage_tutorial_widget_description_2,
+          Icons.notifications_active),
+    ];

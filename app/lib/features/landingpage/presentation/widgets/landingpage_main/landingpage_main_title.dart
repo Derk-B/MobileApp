@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LandingPageMainTitle extends StatelessWidget {
   const LandingPageMainTitle({super.key});
@@ -10,11 +11,11 @@ class LandingPageMainTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Bestel eten en drinken",
+          Text(AppLocalizations.of(context)!.landingpage_title,
               style: Theme.of(context).textTheme.headlineLarge),
           const SizedBox(height: 10),
           Text(
-            "Restaurants en winkels in de buurt",
+            AppLocalizations.of(context)!.landingpage_subtitle,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ],
