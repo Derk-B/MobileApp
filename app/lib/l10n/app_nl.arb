@@ -12,6 +12,7 @@
   "landingpage_tutorial_widget_title_2": "Geef je huidige locatie",
   "landingpage_tutorial_widget_description_2":  "Wij zoeken de dichtsbijzijnde restaurants en winkels voor je op",
   "landingpage_footer_made_by": "Gemaakt door:",
+  "landingpage_drawer_welcome_user": "Welkom",
 
   "firebase_ui_email_input_label": "E-mailadres",
   "firebase_ui_password_input_label": "Wachtwoord",

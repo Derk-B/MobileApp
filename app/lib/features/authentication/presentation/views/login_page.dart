@@ -8,6 +8,11 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SignInScreen(
       providers: [EmailAuthProvider()],
+      actions: [
+        AuthStateChangeAction<SignedIn>((context, state) {
+          Navigator.pop(context);
+        })
+      ],
     );
   }
 }

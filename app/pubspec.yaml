@@ -46,6 +46,7 @@ dependencies:
   intl: ^0.18.1
   flutter_localizations:
     sdk: flutter
+  circle_flags: ^3.0.1
 
 dev_dependencies:
   flutter_test:

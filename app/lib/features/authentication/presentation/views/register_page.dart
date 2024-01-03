@@ -8,6 +8,11 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return RegisterScreen(
       providers: [EmailAuthProvider()],
+      actions: [
+        AuthStateChangeAction<UserCreated>((context, state) {
+          Navigator.pop(context);
+        }),
+      ],
     );
   }
 }

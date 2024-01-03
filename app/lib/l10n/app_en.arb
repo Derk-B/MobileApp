@@ -12,6 +12,7 @@
   "landingpage_tutorial_widget_title_2": "Deliver or takeaway",
   "landingpage_tutorial_widget_description_2":  "We keep you up to date with the progress of your order",
   "landingpage_footer_made_by": "Made by:",
+  "landingpage_drawer_welcome_user": "Welcome",
 
   "firebase_ui_email_input_label": "Email Address",
   "firebase_ui_password_input_label": "Password",

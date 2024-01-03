@@ -1,6 +1,7 @@
 import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer.dart';
 import 'package:app/main.dart';
 import 'package:app/shared/constants/contants.dart';
+import 'package:circle_flags/circle_flags.dart';
 import 'package:flutter/material.dart';
 
 PageRouteBuilder _drawerRoute() {
@@ -29,6 +30,16 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
     }
   }
 
+  String languageCode(BuildContext context) {
+    final app = App.of(context);
+
+    if (app.locale == const Locale("en")) {
+      return "nl";
+    } else {
+      return "gb";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -42,8 +53,12 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
         elevation: 10,
         actions: [
           IconButton(
-              onPressed: () => changeLocale(context),
-              icon: const Icon(Icons.flag)),
+            onPressed: () => changeLocale(context),
+            icon: CircleFlag(
+              languageCode(context),
+              size: kToolbarHeight / 2,
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {
