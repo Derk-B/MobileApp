@@ -10,7 +10,8 @@ class CategoryButton extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: TextButton(
         style: TextButtonTheme.of(context).style?.copyWith(
-              backgroundColor: const MaterialStatePropertyAll(Colors.white),
+              backgroundColor:
+                  const MaterialStatePropertyAll(Colors.transparent),
               foregroundColor: MaterialStatePropertyAll(
                   Theme.of(context).colorScheme.onSecondary),
             ),
