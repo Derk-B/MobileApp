@@ -1,8 +1,8 @@
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_iconbutton.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer_iconbutton.dart';
 import 'package:flutter/material.dart';
 
-class LandingPageDrawerFooter extends StatelessWidget {
-  const LandingPageDrawerFooter({super.key});
+class DefaultDrawerFooter extends StatelessWidget {
+  const DefaultDrawerFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,11 @@ class LandingPageDrawerFooter extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text("Made by: Derk Blom"),
-          LandingPageDrawerIconButton(
+          DefaultDrawerIconButton(
             icon: Icon(Icons.link),
             label: "Linkeding",
           ),
-          LandingPageDrawerIconButton(
+          DefaultDrawerIconButton(
             icon: Icon(Icons.link),
             label: "Github",
           ),

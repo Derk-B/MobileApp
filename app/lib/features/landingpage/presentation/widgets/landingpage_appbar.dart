@@ -1,17 +1,7 @@
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer.dart';
 import 'package:app/main.dart';
-import 'package:app/shared/constants/contants.dart';
-import 'package:circle_flags/circle_flags.dart';
+import 'package:app/shared/widgets/default_drawer_button.dart';
+import 'package:app/shared/widgets/language_button.dart';
 import 'package:flutter/material.dart';
-
-PageRouteBuilder _drawerRoute() {
-  return PageRouteBuilder(
-      pageBuilder: ((context, animation, secondaryAnimation) =>
-          const LandingPageDrawer()),
-      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        return child;
-      });
-}
 
 class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   const LandingPageAppBar({super.key})
@@ -52,23 +42,8 @@ class LandingPageAppBar extends StatelessWidget implements PreferredSizeWidget {
         surfaceTintColor: Colors.white,
         elevation: 10,
         actions: [
-          IconButton(
-            onPressed: () => changeLocale(context),
-            icon: CircleFlag(
-              languageCode(context),
-              size: kToolbarHeight / 2,
-            ),
-          ),
-          IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {
-              if (constraint.maxWidth < LARGE_SCREEN_SIZE) {
-                Navigator.of(context).push(_drawerRoute());
-              } else {
-                Scaffold.of(context).openEndDrawer();
-              }
-            },
-          ),
+          LanguageButton(context),
+          DefaultDrawerButton(constraint),
         ],
       ),
     );

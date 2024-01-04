@@ -1,5 +1,5 @@
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/header/drawer_header_account_name.dart';
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/header/drawer_header_auth_buttons.dart';
+import 'package:app/shared/widgets/default_drawer/header/drawer_header_account_name.dart';
+import 'package:app/shared/widgets/default_drawer/header/drawer_header_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

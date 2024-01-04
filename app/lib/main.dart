@@ -2,7 +2,6 @@ import 'package:app/features/landingpage/presentation/views/landingpage.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:app/l10n/firebase_ui_labels_localized.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';

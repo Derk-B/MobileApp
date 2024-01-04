@@ -1,5 +1,5 @@
 import 'package:app/features/landingpage/presentation/widgets/landingpage_appbar.dart';
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer.dart';
 import 'package:app/features/landingpage/presentation/widgets/landingpage_footer/landingpage_footer.dart';
 import 'package:app/features/landingpage/presentation/widgets/landingpage_main/landingpage_main.dart';
 import 'package:app/features/landingpage/presentation/widgets/landingpage_tutorial/landingpage_tutorial.dart';
@@ -12,7 +12,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: LandingPageAppBar(),
-      endDrawer: LandingPageDrawer(),
+      endDrawer: DefaultDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

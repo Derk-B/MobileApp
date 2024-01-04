@@ -11,20 +11,14 @@ class LandingPageMainSearch extends StatefulWidget {
 
 class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
   final TextEditingController _controller = TextEditingController();
-  bool _searchValueEmpty = false;
+  bool _searchValueEmpty = true;
   final _formKey = GlobalKey<FormState>();
   String searchValue = "";
 
   /// Submit input of formField to the catalog page.
   /// The catalog page will use this to determine a location.
   void _searchSubmit() {
-    if (!_formKey.currentState!.validate()) {
-      const snackBar = SnackBar(
-        content: Text("Error"),
-      );
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      return;
-    }
+    if (!_formKey.currentState!.validate()) return;
 
     _formKey.currentState!.save();
 

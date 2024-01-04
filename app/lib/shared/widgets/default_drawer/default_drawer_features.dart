@@ -1,8 +1,8 @@
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_iconbutton.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer_iconbutton.dart';
 import 'package:flutter/material.dart';
 
-class LandingPageDrawerFeatures extends StatelessWidget {
-  const LandingPageDrawerFeatures({super.key});
+class DefaultDrawerFeatures extends StatelessWidget {
+  const DefaultDrawerFeatures({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +11,11 @@ class LandingPageDrawerFeatures extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          LandingPageDrawerIconButton(
+          DefaultDrawerIconButton(
             icon: Icon(Icons.redeem_outlined),
             label: "Cadeaukaarten",
           ),
-          LandingPageDrawerIconButton(
+          DefaultDrawerIconButton(
             icon: Icon(Icons.help_outline),
             label: "Hulp nodig?",
           ),

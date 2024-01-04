@@ -1,9 +1,9 @@
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/header/drawer_header_account.dart';
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_iconbutton.dart';
+import 'package:app/shared/widgets/default_drawer/header/drawer_header_account.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer_iconbutton.dart';
 import 'package:flutter/material.dart';
 
-class LandingPageDrawerHeader extends StatelessWidget {
-  const LandingPageDrawerHeader({super.key});
+class DefaultDrawerHeader extends StatelessWidget {
+  const DefaultDrawerHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +31,11 @@ class LandingPageDrawerHeader extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 16.0),
             child: DrawerHeaderAccount(),
           ),
-          const LandingPageDrawerIconButton(
+          const DefaultDrawerIconButton(
             icon: Icon(Icons.shopping_bag_outlined),
             label: "Bestellingen",
           ),
-          const LandingPageDrawerIconButton(
+          const DefaultDrawerIconButton(
             icon: Icon(Icons.favorite_outline),
             label: "Favorieten",
           ),

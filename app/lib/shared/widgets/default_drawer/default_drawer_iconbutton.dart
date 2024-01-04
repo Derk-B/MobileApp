@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class LandingPageDrawerIconButton extends StatelessWidget {
+class DefaultDrawerIconButton extends StatelessWidget {
   final Icon icon;
   final String label;
-  const LandingPageDrawerIconButton(
+  const DefaultDrawerIconButton(
       {super.key, required this.icon, required this.label});
 
   @override

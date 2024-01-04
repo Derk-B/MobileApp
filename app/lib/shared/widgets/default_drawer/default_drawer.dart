@@ -1,11 +1,11 @@
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_features.dart';
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_footer.dart';
-import 'package:app/features/landingpage/presentation/widgets/landingpage_drawer/landingpage_drawer_header.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer_features.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer_footer.dart';
+import 'package:app/shared/widgets/default_drawer/default_drawer_header.dart';
 import 'package:app/shared/constants/contants.dart';
 import 'package:flutter/material.dart';
 
-class LandingPageDrawer extends StatelessWidget {
-  const LandingPageDrawer({super.key});
+class DefaultDrawer extends StatelessWidget {
+  const DefaultDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,11 @@ class LandingPageDrawer extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: const [
-            LandingPageDrawerHeader(),
+            DefaultDrawerHeader(),
             Divider(),
-            LandingPageDrawerFeatures(),
+            DefaultDrawerFeatures(),
             Divider(),
-            LandingPageDrawerFooter(),
+            DefaultDrawerFooter(),
           ],
         ),
       );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../authentication/presentation/views/login_page.dart';
-import '../../../../../authentication/presentation/views/register_page.dart';
+import '../../../../features/authentication/presentation/views/login_page.dart';
+import '../../../../features/authentication/presentation/views/register_page.dart';
 
 class DrawerHeaderAuthButtons extends StatelessWidget {
   const DrawerHeaderAuthButtons({super.key});
