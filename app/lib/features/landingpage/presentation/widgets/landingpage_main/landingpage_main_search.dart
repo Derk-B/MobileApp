@@ -1,3 +1,4 @@
+import 'package:app/features/catalog/presentation/views/catalog_screen.dart';
 import 'package:app/shared/localizations_ext.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,29 @@ class LandingPageMainSearch extends StatefulWidget {
 
 class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
   final TextEditingController _controller = TextEditingController();
-  bool _showClearIcon = false;
+  bool _searchValueEmpty = false;
+  final _formKey = GlobalKey<FormState>();
+  String searchValue = "";
+
+  /// Submit input of formField to the catalog page.
+  /// The catalog page will use this to determine a location.
+  void _searchSubmit() {
+    if (!_formKey.currentState!.validate()) {
+      const snackBar = SnackBar(
+        content: Text("Error"),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    }
+
+    _formKey.currentState!.save();
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CatalogScreen(location: searchValue),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +46,7 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
           border: Border.all(color: Colors.black, width: 1),
         ),
         child: Form(
+          key: _formKey,
           child: SizedBox(
             height: 50,
             child: Row(
@@ -31,10 +55,16 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                 Expanded(
                   child: Align(
                     alignment: Alignment.center,
-                    child: TextField(
+                    child: TextFormField(
                       controller: _controller,
+                      onSaved: (newValue) => searchValue = newValue ?? "",
+                      validator: (value) {
+                        if (value == null) return "Empty";
+                        if (value.isEmpty) return "Empty";
+                        return null;
+                      },
                       onChanged: (value) =>
-                          setState(() => _showClearIcon = value.isNotEmpty),
+                          setState(() => _searchValueEmpty = value.isEmpty),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 12.0, horizontal: 8.0),
@@ -42,23 +72,31 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                             .landingpage_search_hint,
                         border: const OutlineInputBorder(
                             borderSide: BorderSide.none),
+                        isDense: true,
+                        errorStyle: const TextStyle(
+                            color: Colors.transparent, fontSize: 0),
                       ),
                     ),
                   ),
                 ),
                 Opacity(
-                    opacity: _showClearIcon ? 1 : 0,
+                    opacity: _searchValueEmpty ? 0 : 1,
                     child: IconButton(
                       onPressed: () {
                         _controller.clear();
                         setState(() {
-                          _showClearIcon = false;
+                          _searchValueEmpty = true;
                         });
                       },
                       icon: const Icon(Icons.clear),
                     )),
                 TextButton(
                   style: const ButtonStyle().copyWith(
+                      backgroundColor: MaterialStatePropertyAll(
+                        _searchValueEmpty
+                            ? Theme.of(context).colorScheme.secondary
+                            : Theme.of(context).colorScheme.primary,
+                      ),
                       minimumSize:
                           const MaterialStatePropertyAll(Size(100, 0))),
                   child: Text(
@@ -68,7 +106,7 @@ class _LandingPageMainSearchState extends State<LandingPageMainSearch> {
                       color: Theme.of(context).colorScheme.onPrimary,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () => _searchSubmit(),
                 ),
               ],
             ),
