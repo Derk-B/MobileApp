@@ -1,3 +1,4 @@
+import 'package:app/shared/localizations_ext.dart';
 import 'package:flutter/material.dart';
 
 class CatalogHeaderFilterSort extends StatelessWidget {
@@ -10,17 +11,9 @@ class CatalogHeaderFilterSort extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextButton(
-            style: TextButtonTheme.of(context).style?.copyWith(
-                  backgroundColor: MaterialStatePropertyAll(
-                    Theme.of(context).colorScheme.secondary,
-                  ),
-                ),
             onPressed: () {},
             child: Text(
-              "Filter",
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.onSecondary,
-              ),
+              AppLocalizations.of(context)!.catalog_filter_button,
             ),
           ),
         ),
@@ -28,17 +21,9 @@ class CatalogHeaderFilterSort extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextButton(
-            style: TextButtonTheme.of(context).style?.copyWith(
-                  backgroundColor: MaterialStatePropertyAll(
-                    Theme.of(context).colorScheme.secondary,
-                  ),
-                ),
             onPressed: () {},
             child: Text(
-              "Sorteer",
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.onSecondary,
-              ),
+              AppLocalizations.of(context)!.catalog_sort_button,
             ),
           ),
         ),

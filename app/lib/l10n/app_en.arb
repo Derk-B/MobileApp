@@ -38,5 +38,10 @@
   "firebase_ui_unknown_error": "Unknown error, please try again later or contact us",
   "firebase_ui_is_not_a_valid_email_error_text": "Please provide a valid email address",
   "firebase_ui_wrong_or_no_password_error_text": "Incorrect password or no password provided",
-  "firebase_ui_weak_password_error_text": "Weak password, please choose a stronger one"
+  "firebase_ui_weak_password_error_text": "Weak password, please choose a stronger one",
+
+  "catalog_categories_error": "Error, could not fetch available categories",
+  "catalog_filter_button": "Filter",
+  "catalog_sort_button": "Sort",
+  "catalog_restaurants_error": "Cannot load nearby restaurants"
 }

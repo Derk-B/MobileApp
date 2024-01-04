@@ -1,12 +1,12 @@
-import 'package:app/features/catalog/data/datasources/category_datasource.dart';
-import 'package:app/features/catalog/data/dto/category_dto.dart';
+import 'package:app/features/catalog/data/datasources/restaurant_datasource.dart';
+import 'package:app/features/catalog/data/dto/restaurant_dto.dart';
 import 'package:app/shared/domain/repositories/abstract_repository.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class CategoryRepository extends Repository<CategoryDTO> {
+class RestaurantRepository extends Repository<RestaurantDTO> {
   @override
-  Future<CategoryDTO?> fetchById(String id) {
-    final datasource = CategoryDatasource().fetchRef();
+  Future<RestaurantDTO?> fetchById(String id) {
+    final datasource = RestaurantDatasource().fetchRef();
 
     /// Returns null when Firebase returns an error.
     /// Possible errors could be: user has not rights or collection does not exist.
@@ -19,14 +19,13 @@ class CategoryRepository extends Repository<CategoryDTO> {
     }
 
     return document.then(
-      (value) => CategoryDTO.fromJSON(value.id, value.data()),
+      (value) => RestaurantDTO.fromJSON(value.id, value.data()),
     );
   }
 
-  /// Get all categories from the database, there is no need to filter.
   @override
-  Future<List<CategoryDTO>?> fetchList() async {
-    final datasource = CategoryDatasource().fetchRef();
+  Future<List<RestaurantDTO>?> fetchList() async {
+    final datasource = RestaurantDatasource().fetchRef();
 
     /// Returns null when Firebase returns an error.
     /// Possible errors could be: user has not rights or collection does not exist.
@@ -39,6 +38,8 @@ class CategoryRepository extends Repository<CategoryDTO> {
       return Future.value(null);
     }
 
-    return documents.map((e) => CategoryDTO.fromJSON(e.id, e.data())).toList();
+    return documents
+        .map((e) => RestaurantDTO.fromJSON(e.id, e.data()))
+        .toList();
   }
 }

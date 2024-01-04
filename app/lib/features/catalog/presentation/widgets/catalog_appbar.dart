@@ -15,6 +15,7 @@ class CatalogAppbar extends StatelessWidget implements PreferredSizeWidget {
     return LayoutBuilder(builder: (context, constraints) {
       return AppBar(
         title: Text(location),
+        surfaceTintColor: Colors.white,
         actions: [
           LanguageButton(context),
           DefaultDrawerButton(constraints),

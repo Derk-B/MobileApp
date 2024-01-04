@@ -14,14 +14,17 @@ class CatalogScreen extends StatelessWidget {
     return Scaffold(
       appBar: CatalogAppbar(location),
       endDrawer: const DefaultDrawer(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Categorien
-          CatalogHeaderCategories(),
-          const CatalogHeaderFilterSort(),
-          const CatalogList(),
-        ],
+      body: const Padding(
+        padding: EdgeInsets.only(top: 8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CatalogHeaderCategories(),
+            Divider(),
+            CatalogHeaderFilterSort(),
+            CatalogList(),
+          ],
+        ),
       ),
     );
   }

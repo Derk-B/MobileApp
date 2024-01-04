@@ -3,7 +3,7 @@ import 'package:app/shared/data/dto/abstract_dto.dart';
 class RestaurantDTO extends DTO {
   final String name;
   final String address;
-  final String deliveryCost;
+  final num deliveryCost;
   final List<String> categories;
   final String restaurantId;
 
@@ -16,13 +16,13 @@ class RestaurantDTO extends DTO {
   );
 
   @override
-  factory RestaurantDTO.fromJSON(dynamic json) {
+  factory RestaurantDTO.fromJSON(String id, dynamic json) {
     return RestaurantDTO(
-      json["restaurantId"],
+      id,
       json["name"],
       json["address"],
       json["deliveryCost"],
-      json["categories"],
+      (json["categories"] as List).map((e) => e.toString()).toList(),
     );
   }
 }

@@ -5,12 +5,21 @@ sealed class CategoriesState extends Equatable {
   List<Object> get props => [];
 }
 
-final class CategoriesInitial extends CategoriesState {
+final class CategoriesLoaded extends CategoriesState {
+  final List<CategoryEntity> categories;
+
+  CategoriesLoaded({required this.categories});
+
   @override
   List<Object> get props => [];
 }
 
 final class CategoriesLoading extends CategoriesState {
+  @override
+  List<Object> get props => [];
+}
+
+final class CategoriesError extends CategoriesState {
   @override
   List<Object> get props => [];
 }
