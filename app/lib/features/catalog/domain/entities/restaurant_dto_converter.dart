@@ -12,6 +12,7 @@ class RestaurantDTOConverter
       dto.address,
       dto.deliveryCost,
       dto.categories,
+      dto.dishIds ?? List.empty(),
     );
   }
 }

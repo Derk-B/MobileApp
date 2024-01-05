@@ -3,8 +3,8 @@ import 'package:circle_flags/circle_flags.dart';
 import 'package:flutter/material.dart';
 
 class LanguageButton extends StatelessWidget {
-  BuildContext parentContext;
-  LanguageButton(this.parentContext, {super.key});
+  final BuildContext parentContext;
+  const LanguageButton(this.parentContext, {super.key});
 
   changeLocale(BuildContext context) {
     final app = App.of(context);

@@ -43,5 +43,10 @@
   "catalog_categories_error": "Oeps, ik kan de categorieën niet laden",
   "catalog_filter_button": "Filter",
   "catalog_sort_button": "Sorteer",
-  "catalog_restaurants_error": "Restaurants kunnen niet geladen worden"
+  "catalog_restaurants_error": "Restaurants kunnen niet geladen worden",
+
+  "restaurant_address": "Adres",
+  "restaurant_dishes_error": "Kan gerechten niet laden voor dit restaurant",
+  "restaurant_dishes_add": "Bestellen",
+  "restaurant_dishes_work_in_progress": "Deze pagina is nog niet af"
 }

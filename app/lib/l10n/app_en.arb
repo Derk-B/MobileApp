@@ -43,5 +43,10 @@
   "catalog_categories_error": "Error, could not fetch available categories",
   "catalog_filter_button": "Filter",
   "catalog_sort_button": "Sort",
-  "catalog_restaurants_error": "Cannot load nearby restaurants"
+  "catalog_restaurants_error": "Cannot load nearby restaurants",
+
+  "restaurant_address": "Address",
+  "restaurant_dishes_error": "Could not fetch dishes for this restaurant",
+  "restaurant_dishes_add": "Order",
+  "restaurant_dishes_work_in_progress": "This page is not done yet"
 }

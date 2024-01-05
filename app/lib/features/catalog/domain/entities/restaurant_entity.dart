@@ -4,6 +4,7 @@ class RestaurantEntity {
   final num deliveryCost;
   final List<String> categories;
   final String restaurantId;
+  final List<String> dishIds;
 
   const RestaurantEntity(
     this.restaurantId,
@@ -11,5 +12,6 @@ class RestaurantEntity {
     this.address,
     this.deliveryCost,
     this.categories,
+    this.dishIds,
   );
 }

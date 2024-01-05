@@ -11,7 +11,7 @@ class CatalogHeaderCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 80,
+      height: 95,
       child: BlocProvider(
         create: (context) => CategoriesBloc()..add(LoadCategories()),
         child: BlocBuilder<CategoriesBloc, CategoriesState>(

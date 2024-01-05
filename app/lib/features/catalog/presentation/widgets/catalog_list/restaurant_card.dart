@@ -1,9 +1,16 @@
 import 'package:app/features/catalog/domain/entities/restaurant_entity.dart';
+import 'package:app/features/restaurant/presentation/views/restaurant_view.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantCard extends StatelessWidget {
   final RestaurantEntity restaurant;
   const RestaurantCard(this.restaurant, {super.key});
+
+  void _navigateToRestaurantView(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => RestaurantView(restaurant)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +54,7 @@ class RestaurantCard extends StatelessWidget {
                       Icons.add,
                       color: Theme.of(context).colorScheme.onPrimary,
                     ),
-                    onPressed: () {},
+                    onPressed: () => _navigateToRestaurantView(context),
                   ),
                 ),
               )
